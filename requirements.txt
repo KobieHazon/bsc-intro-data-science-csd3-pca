@@ -1,0 +1,7 @@
+matplotlib
+numpy
+pandas
+requests
+scikit-image
+scikit-learn
+notebook

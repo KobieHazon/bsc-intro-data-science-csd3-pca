@@ -1,0 +1,9 @@
+.DS_Store
+._*
+.ipynb_checkpoints/
+__pycache__/
+.pytest_cache/
+.venv/
+ebay_boys_girls_shirts/
+ebay_boys_girls_shirts.tar
+ebay_boys_girls_shirts.tar.gz
