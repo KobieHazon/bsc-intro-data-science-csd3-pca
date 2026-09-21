@@ -12,6 +12,10 @@ Template or reference material:
 
 - `assignment/CSD3.ipynb`
 
+Runnable implementation:
+
+- `solutions/CSD3.ipynb`: complete PCA workflow
+
 My submitted answers:
 
 - `results/csd3_answers.csv`
@@ -25,12 +29,16 @@ My submitted answers:
 ## Notes
 
 - The exercise notebook and submitted answer CSV are included.
-- The large course image dataset is not tracked; the original notebook downloads the dataset from the course URL.
+- The image dataset is supplied separately. The runnable notebook uses a local dataset directory.
 
-## Validate
+## Run
 
-```bash
-python3 scripts/check_notebooks.py
+Supply the extracted `ebay_boys_girls_shirts` course dataset:
+
+```sh
+uv run --python 3.11 python scripts/run_notebook.py /path/to/ebay_boys_girls_shirts
 ```
 
-The notebook contains incomplete exercise cells; the submitted answers are in the CSV. The check validates file structure, not a completed notebook execution.
+This runs the complete PCA workflow on 64 real images per class: loading, centering, ten-component PCA, projection, reconstruction checks, plots, and score exports. The exercise template and submitted answer CSV are unchanged. The runnable implementation completes the coding exercises; it is not the original submitted notebook.
+
+Add `--full` to use 2,000 training images per class. Use `--output-dir PATH` to keep generated plots and CSVs; otherwise they are temporary. Submitted files are never overwritten. For interactive use, set `SHIRTS_DATASET` before opening the solution notebook.
